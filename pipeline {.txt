@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git url') {
+            steps {
+                git 'https://github.com/ApurvaBhavsar/apu.git'
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'docker build -t khushi .'
+            }
+        }
+        stage('run') {
+            steps {
+                sh 'docker run --name khushi_container -d -p 8085:80 khushi'
+            }
+        }
+
+
+
+
+
+
+dockerswarm
+docker login
+docker swarm init
+docker build -t neeti071/niti .
+docker images
+docker ps -a
+docker service ls
+docker push neeti071/niti
+docker service create --name nituu --replicas 3 -d -p 80:80 neeti071/niti
+
+
+
+
+html code
+<h1> hi good morning </h1>
+<h2> <a href = 'tinku.html'>apu</a> </h2>
+
+
+
+
+docker gawaderutuja38@
+
+build step= 
+docker build -t name .
+docker run  --name name_container -d -p 8081:80 buildname
+sudo chmod 777 /var/run/dockr.sock
+sudo usermod -aG docker jenkins
+sudo usermod -aG docker $USER
+sudo usermod -aG docker sudo jenkins
+
+output-publicip:8081
